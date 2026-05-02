@@ -3,236 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHAMBHU EXCHANGE WIN REAL CASH</title>
-
+    <title>SHAMBHU EXCHANGE – WIN REAL CASH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
+            --gold: #c9a84c;
+            --gold-light: #f0d080;
             --whatsapp-green: #25D366;
             --theme-green: #4CAF50;
-            --dark-bg: #0a0a0a;
-            --card-bg: #1a1a1a;
+            --dark-bg: #080808;
         }
-
+        * { box-sizing: border-box; }
         body {
             margin: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Rajdhani', sans-serif;
             background-color: var(--dark-bg);
             color: white;
             display: flex;
             justify-content: center;
         }
-
         .wrapper {
             width: 100%;
             max-width: 480px;
             background-color: #000;
             overflow-x: hidden;
         }
-
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/500x300?text=Cricket+Player+Background');
-            background-size: cover;
-            padding: 20px;
+            position: relative;
+            padding: 30px 20px 25px;
             text-align: center;
+            background: radial-gradient(ellipse at 50% 0%, #1a1200 0%, #000 70%);
+            border-bottom: 1px solid #2a2000;
+            overflow: hidden;
         }
-
-        h1 { 
-            font-size: 2.5rem; 
-            line-height: 1; 
-            margin: 10px 0; 
-            font-weight: 900; 
-            font-style: italic; 
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(201,168,76,0.03) 40px, rgba(201,168,76,0.03) 41px);
+            pointer-events: none;
         }
-
-        .green-text { color: var(--theme-green); }
-
-        /* LOGO STYLE */
+        .logo-area { margin-bottom: 12px; }
         .logo-area img {
             width: 140px;
             height: auto;
-            filter: drop-shadow(0 0 10px gold);
+            filter: drop-shadow(0 0 18px rgba(201,168,76,0.7));
+            animation: glowPulse 3s ease-in-out infinite;
         }
-
+        @keyframes glowPulse {
+            0%, 100% { filter: drop-shadow(0 0 18px rgba(201,168,76,0.7)); }
+            50%       { filter: drop-shadow(0 0 32px rgba(201,168,76,1)); }
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a1a00, #2a2000);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            font-size: 0.72rem;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+        .play-row {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #aaa;
+        }
+        .play-tag {
+            background: var(--theme-green);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 6px;
+            font-size: 0.8rem;
+        }
+        .headline {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.8rem;
+            line-height: 0.95;
+            margin: 6px 0 14px;
+            letter-spacing: 2px;
+        }
+        .headline .gold-text {
+            color: var(--gold-light);
+            text-shadow: 0 0 30px rgba(201,168,76,0.5);
+        }
+        .subtext { font-size: 0.85rem; color: #888; margin-bottom: 20px; }
+        .subtext .wa-highlight { color: var(--whatsapp-green); font-weight: 700; }
         .btn-main {
-            background-color: var(--whatsapp-green);
+            background: linear-gradient(135deg, #1aad4a, var(--whatsapp-green));
             color: white;
-            padding: 18px;
-            border-radius: 40px;
+            padding: 16px 24px;
+            border-radius: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin: 20px 0;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            margin: 0 auto 14px;
+            max-width: 360px;
+            box-shadow: 0 4px 24px rgba(37,211,102,0.35);
         }
-
+        .btn-main img { margin-right: 10px; }
+        .reply-time { font-size: 0.78rem; color: var(--gold); }
         .features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            padding: 15px;
+            gap: 8px;
+            padding: 14px;
+            background: #0d0d0d;
+        }
+        .feature-item {
+            text-align: center;
+            font-size: 0.72rem;
+            color: #bbb;
+            padding: 14px 10px;
+            border: 1px solid #1e1a00;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #111, #0d0d00);
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+        .feature-item .icon { font-size: 1.4rem; display: block; margin-bottom: 6px; }
+        .section-title {
+            text-align: center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            color: var(--gold-light);
+            margin: 28px 0 10px;
+        }
+        .steps {
+            padding: 10px 20px 24px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            text-align: center;
+            gap: 4px;
+        }
+        .step { font-size: 0.62rem; color: #bbb; width: 22%; font-weight: 600; }
+        .step-circle {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #2a8c3a, var(--theme-green));
+            border-radius: 50%;
+            margin: 0 auto 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(76,175,80,0.4);
+        }
+        .step-connector { flex: 1; height: 1px; background: #222; margin-top: 17px; }
+        .why-us {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #080800, #000);
+            margin: 0 14px 20px;
+            border-radius: 14px;
+            border: 1px solid #1e1a00;
+        }
+        .why-us h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            color: var(--gold-light);
+            margin: 0 0 10px;
+        }
+        .why-tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .why-tag {
+            font-size: 0.7rem;
+            color: #aaa;
             background: #111;
+            border: 1px solid #2a2000;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-weight: 600;
         }
-
-        .feature-item { 
-            text-align: center; 
-            font-size: 0.7rem; 
-            color: #aaa; 
-            padding: 10px; 
-            border: 1px solid #222; 
-            border-radius: 8px; 
-        }
-
-        .section-title { 
-            text-align: center; 
-            font-size: 1.2rem; 
-            margin: 30px 0 15px; 
-            text-transform: uppercase; 
-            border-bottom: 1px solid #333; 
-            line-height: 0.1em; 
-        }
-
-        .section-title span { 
-            background:#000; 
-            padding:0 10px; 
-        }
-
-        .steps { 
-            padding: 20px; 
-            display: flex; 
-            justify-content: space-around; 
-            text-align: center; 
-        }
-
-        .step { 
-            font-size: 0.6rem; 
-            color: #fff; 
-            width: 22%; 
-        }
-
-        .step-circle { 
-            width: 30px; 
-            height: 30px; 
-            background: var(--theme-green); 
-            border-radius: 50%; 
-            margin: 0 auto 5px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-weight: bold; 
-        }
-
+        .spacer { height: 90px; }
         .sticky-footer {
             position: fixed;
             bottom: 0;
             width: 100%;
             max-width: 480px;
-            background: #111;
-            padding: 10px;
+            background: linear-gradient(to top, #0d0d00, #111);
+            padding: 12px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 2px solid var(--theme-green);
+            border-top: 2px solid var(--gold);
+            z-index: 100;
         }
-
-        .btn-small-wa { 
-            background: var(--whatsapp-green); 
-            padding: 8px 15px; 
-            border-radius: 20px; 
-            color: #fff; 
-            text-decoration: none; 
-            font-size: 0.8rem; 
-            font-weight: bold; 
+        .footer-text { font-size: 0.78rem; color: #999; line-height: 1.4; }
+        .footer-text strong { color: var(--gold-light); font-size: 0.9rem; display: block; }
+        .btn-small-wa {
+            background: linear-gradient(135deg, #1aad4a, var(--whatsapp-green));
+            padding: 10px 16px;
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
         }
-
     </style>
 </head>
-
 <body>
-
 <div class="wrapper">
-
-    <!-- HERO -->
     <div class="hero">
-
-        <!-- LOGO -->
         <div class="logo-area">
-            <img src="WhatsApp Image 2026-04-19 at 2.39.18 AM.jpeg" alt="Shambhu Logo">
+            <img src="https://raw.githubusercontent.com/videocration63-glitch/winnercircle/main/WhatsApp%20Image%202026-04-19%20at%202.39.18%20AM.jpeg" alt="Shambhu Online Exchange Logo" onerror="this.style.display='none'">
         </div>
-
-        <!-- PLAYERS -->
-        <div style="background:rgba(255,255,255,0.1); padding:5px; border-radius:5px; display:inline-block; margin-bottom:10px;">
-            <small>10,000+ Players</small>
-        </div>
-
-        <p>
-            <span style="background:var(--theme-green); padding:2px 5px; border-radius:3px;">
-                PLAY
-            </span> 
-            FANTASY CRICKET
-        </p>
-
-        <h1>WIN REAL<br><span class="green-text">REWARDS</span></h1>
-
-        <p>
-            Join now & get your Game ID instantly on 
-            <span style="color:var(--whatsapp-green)">WhatsApp</span>
-        </p>
-
+        <div class="badge">⭐ 10,000+ PLAYERS TRUSTED</div>
+        <div class="play-row"><span class="play-tag">PLAY</span> FANTASY CRICKET</div>
+        <div class="headline">WIN REAL<br><span class="gold-text">REWARDS</span></div>
+        <p class="subtext">Join now & get your Game ID instantly on <span class="wa-highlight">WhatsApp</span></p>
         <a href="https://wa.me/918982965636" class="btn-main">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="25" style="margin-right:10px;">
-            GET YOUR ID ON WHATSAPP >
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="22" alt="WhatsApp">
+            GET YOUR ID ON WHATSAPP ›
         </a>
-
-        <p style="color: gold; font-size: 0.8rem;">
-            ⚡ Average reply time: 30 seconds
-        </p>
-
+        <p class="reply-time">⚡ Average reply time: 30 seconds</p>
     </div>
-
-    <!-- FEATURES -->
     <div class="features">
-        <div class="feature-item">🏆<br>DAILY MATCHES</div>
-        <div class="feature-item">💬<br>INSTANT ID</div>
-        <div class="feature-item">🛡️<br>SAFE & SECURE</div>
-        <div class="feature-item">⚡<br>FAST PAYOUT</div>
+        <div class="feature-item"><span class="icon">🏆</span>DAILY MATCHES</div>
+        <div class="feature-item"><span class="icon">💬</span>INSTANT ID</div>
+        <div class="feature-item"><span class="icon">🛡️</span>SAFE & SECURE</div>
+        <div class="feature-item"><span class="icon">⚡</span>FAST PAYOUT</div>
     </div>
-
-    <!-- HOW IT WORKS -->
-    <div class="section-title"><span>HOW IT WORKS?</span></div>
-
+    <div class="section-title">HOW IT WORKS</div>
     <div class="steps">
-        <div class="step"><div class="step-circle">1</div>CLICK "GET ID"</div>
-        <div class="step"><div class="step-circle">2</div>MESSAGE US</div>
-        <div class="step"><div class="step-circle">3</div>GET ID</div>
-        <div class="step"><div class="step-circle">4</div>START PLAYING</div>
+        <div class="step"><div class="step-circle">1</div>CLICK<br>"GET ID"</div>
+        <div class="step-connector"></div>
+        <div class="step"><div class="step-circle">2</div>MESSAGE<br>US</div>
+        <div class="step-connector"></div>
+        <div class="step"><div class="step-circle">3</div>RECEIVE<br>YOUR ID</div>
+        <div class="step-connector"></div>
+        <div class="step"><div class="step-circle">4</div>START<br>PLAYING</div>
     </div>
-
-    <!-- WHY US -->
-    <div style="padding: 20px; text-align: center;">
-        <h3 style="color:var(--theme-green)">WHY PLAY WITH US?</h3>
-        <p style="font-size: 0.8rem; color:#888;">
-            100% Secure | Fast Withdrawals | 24/7 Support
-        </p>
-    </div>
-
-    <!-- SPACER -->
-    <div style="height: 80px;"></div>
-
-    <!-- FOOTER -->
-    <div class="sticky-footer">
-        <div style="font-size: 0.8rem;">
-            READY TO PLAY?<br>
-            <strong>GET CRICKET ID NOW!</strong>
+    <div class="section-title">WHY PLAY WITH US</div>
+    <div class="why-us">
+        <h3>SHAMBHU EXCHANGE</h3>
+        <div class="why-tags">
+            <span class="why-tag">✅ 100% Secure</span>
+            <span class="why-tag">💸 Fast Withdrawals</span>
+            <span class="why-tag">🕐 24/7 Support</span>
+            <span class="why-tag">🏅 Trusted by 10k+</span>
         </div>
-
-        <a href="https://wa.me/918982965636" class="btn-small-wa">
-            CHAT ON WHATSAPP >
-        </a>
     </div>
-
+    <div class="spacer"></div>
+    <div class="sticky-footer">
+        <div class="footer-text">READY TO PLAY?<strong>GET CRICKET ID NOW!</strong></div>
+        <a href="https://wa.me/918982965636" class="btn-small-wa">CHAT ON WHATSAPP ›</a>
+    </div>
 </div>
-
 </body>
 </html>
